@@ -5,10 +5,9 @@
     Step-1: Start
     Step-2: Declare arr[size], minValue, maxValue
     Step-3: Initialize minValue = arr[0] and maxValue = arr[0]
-    Step-4: Start loop until i < size
-                if minValue>arr[i] then minValue = arr[i]
-                and
-                if maxValue < arr[i] then maxValue = arr[i]
+    Step-4: repeat steps 5 and 6 while i < size
+    Step-5: if minValue>arr[i] then minValue = arr[i]
+    Step-6: if maxValue < arr[i] then maxValue = arr[i]
     step-5: Stop
 */
 
