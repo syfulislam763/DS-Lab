@@ -55,5 +55,7 @@ int main(){
 
     deleteItem(&head);
 
+    std::cout << head->next->data << std::endl;
+
     return 0;
 }
