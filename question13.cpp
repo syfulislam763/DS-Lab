@@ -4,7 +4,7 @@
 /*
 
 
-    Step 1: Repeat Steps 2 to 3 while root != NULL
+    Step 1: Repeat Steps 2 to 5  while root != NULL
     Step 2: postOrderTraversing(root -> left)
     Step 3: postOrderTraversing(root -> right)
     Step 4: Write root -> data
@@ -22,34 +22,6 @@ struct Node {
     struct Node *left;
     struct Node *right;
 };
-
-void insert(struct Node **root, int data){
-    if((*root)->data > data){
-        if((*root)->left == NULL){
-            struct Node *node = new (struct Node);
-            node->data = data;
-            node->left = NULL;
-            node->right = NULL;
-            (*root)->left = node;
-            return;
-        }else{
-            insert(&((*root)->left), data);
-        }
-        
-    }else{
-        if((*root)->right == NULL){
-            struct Node *node = new (struct Node);
-            node->data = data;
-            node->left = NULL;
-            node->right = NULL;
-            (*root)->right = node;
-            return;
-        }else{
-            insert(&((*root)->right), data);
-        }
-    }
-}
-
 
 void postOrderTraversing(struct Node *root){
     if(root == NULL){
@@ -70,11 +42,21 @@ int main(){
     root->left = NULL;
     root->right = NULL;
 
-    
-    insert(&root, 5);
-    insert(&root, 15);
-    insert(&root, 3);
-    insert(&root, 13);
+    struct Node *node1, *node2;
+    node1 = new (struct Node);
+    node2 = new (struct Node);
+
+    node1->data = 15;
+    node1->left = NULL;
+    node1->right = NULL;
+
+    node2->data = 20;
+    node2->left = NULL;
+    node2->right = NULL;
+
+    root->left = node1;
+    root->right = node2;
+
 
     postOrderTraversing(root);
 
