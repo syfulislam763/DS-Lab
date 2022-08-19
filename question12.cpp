@@ -3,7 +3,7 @@
 //Algorithm
 /*
 
-    Step 1: Repeat Steps 2 to 4 while toot != NULL
+    Step 1: Repeat Steps 2 to 4 while root != NULL
     Step 2: Write root -> data
     Step 3: preOrderTraversing(root -> left)
     Step 4: preOrderTraversing(root -> right)
@@ -69,8 +69,8 @@ int main(){
     
     insert(&root, 5);
     insert(&root, 15);
-    insert(&root, 3);
-    insert(&root, 13);
+    // insert(&root, 3);
+    // insert(&root, 13);
 
     preOrderTraversing(root);
 

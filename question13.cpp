@@ -4,9 +4,9 @@
 /*
 
 
-    Step 1: Repeat Steps 2 to 3 while toot != NULL
-    Step 2: preOrderTraversing(root -> left)
-    Step 3: preOrderTraversing(root -> right)
+    Step 1: Repeat Steps 2 to 3 while root != NULL
+    Step 2: postOrderTraversing(root -> left)
+    Step 3: postOrderTraversing(root -> right)
     Step 4: Write root -> data
     [end of loop]
     Step 5: exit
